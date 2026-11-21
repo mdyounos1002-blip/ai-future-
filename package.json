@@ -1,0 +1,24 @@
+{
+  "name": "ai-future-now",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI — ভবিষ্যৎ এখন | 30s cinematic Bangla vertical video (Remotion)",
+  "scripts": {
+    "audio": "python3 scripts/make_audio.py",
+    "voice": "bash scripts/make_voice.sh",
+    "dev": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts AIFutureNow out/ai-future-now.mp4 --codec=h264 --crf=16",
+    "thumb": "remotion still src/index.ts AIFutureNow out/thumbnail.png --frame=48"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.250",
+    "@remotion/google-fonts": "^4.0.250",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "^4.0.250"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.3",
+    "typescript": "5.5.4"
+  }
+}
